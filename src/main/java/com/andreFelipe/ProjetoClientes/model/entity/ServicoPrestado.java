@@ -23,6 +23,9 @@ public class ServicoPrestado {
     @Column
     private BigDecimal valor;
 
+    @Column
+    @JsonFormat(pattern = "dd/MM/yyyy")
+    private LocalDate data;
 
     public Integer getId() {
         return id;
@@ -32,9 +35,7 @@ public class ServicoPrestado {
         this.id = id;
     }
 
-    @Column
-    @JsonFormat(pattern = "dd/MM/yyyy")
-    private LocalDate data;
+
 
     public String getDescricao() {
         return descricao;
